@@ -4,46 +4,154 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Crece Magia — El mensaje te encuentra</title>
+  <meta name="description" content="Crece Magia es una caja oracular con 200 fragmentos simbólicos. Una herramienta poética, no predictiva, para abrir presencia y verdad.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root { --gold:#d4af37; --ink:#0a0a0a; --cream:#f7f4ec; }
-    html { scroll-behavior: smooth; }
-    .gold { color: var(--gold); }
-    .bg-ink { background: var(--ink); }
-    .bg-cream { background: var(--cream); }
-    .ring-gold { --tw-ring-color: var(--gold); }
-    .shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,.2); }
+    html { scroll-behavior:smooth; }
+    body { background:var(--ink); color:var(--cream); }
+    .gold{ color:var(--gold); }
+    .shadow-soft{ box-shadow:0 10px 30px rgba(0,0,0,.25); }
+    .ring-gold{ --tw-ring-color: var(--gold); }
   </style>
 </head>
-<body class="bg-ink text-cream antialiased">
-  <section class="max-w-6xl mx-auto px-4 py-20 text-center">
-    <h1 class="text-5xl font-extrabold gold" style="font-family:'Playfair Display',serif;">Crece Magia</h1>
-    <p class="mt-4 text-xl text-white/90">El mensaje te encuentra</p>
-    <p class="mt-6 max-w-2xl mx-auto text-white/80">Una caja oracular con 200 fragmentos simbólicos para abrir presencia, contemplación y verdad. No adivina: revela lo que ya late en ti.</p>
-    <div class="mt-8 flex justify-center gap-3">
-      <a href="#" class="bg-[var(--gold)] text-black px-6 py-3 rounded-xl font-semibold shadow-soft hover:opacity-90">Comprar</a>
-      <a href="#galeria" class="px-6 py-3 rounded-xl ring-1 ring-gold hover:ring-gold/80">Ver fragmentos</a>
+<body class="antialiased">
+  <!-- NAV -->
+  <header class="sticky top-0 z-30 backdrop-blur bg-black/70 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="font-extrabold tracking-tight text-xl gold">Crece Magia</a>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="#intro" class="hover:opacity-80">Qué es</a>
+        <a href="#galeria" class="hover:opacity-80">Imágenes</a>
+        <a href="#faq" class="hover:opacity-80">Preguntas</a>
+      </nav>
+      <a href="#comprar" class="hidden md:inline-flex bg-[var(--gold)] text-black px-4 py-2 rounded-xl font-semibold shadow-soft hover:opacity-90">Comprar</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="max-w-6xl mx-auto px-4 py-16 grid lg:grid-cols-2 gap-10 items-center">
+    <div>
+      <h1 class="text-5xl md:text-6xl font-extrabold leading-tight" style="font-family:'Playfair Display',serif;">
+        Crece <span class="gold">Magia</span>
+      </h1>
+      <p class="mt-3 text-lg md:text-xl text-white/90">El mensaje te encuentra.</p>
+      <p class="mt-6 text-white/80 max-w-xl">Una caja oracular con <span class="gold font-semibold">200 fragmentos simbólicos</span>. No predice: <em>revela</em> lo que ya late en ti. Herramienta poética, ritual y consciente para tu día a día.</p>
+      <div class="mt-7 flex gap-3">
+        <a href="#comprar" class="bg-[var(--gold)] text-black px-6 py-3 rounded-xl font-semibold shadow-soft hover:opacity-90">Quiero la mía</a>
+        <a href="#galeria" class="px-6 py-3 rounded-xl ring-1 ring-gold hover:ring-2">Ver imágenes</a>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-3">
+      <!-- TODO: Reemplaza estos src por /images/tapa.jpg, /images/caja-abierta.jpg, etc. -->
+      <img src="https://via.placeholder.com/885x295/000000/FFFFFF?text=Caja+tapa" class="rounded-2xl shadow-soft w-full h-44 object-cover" alt="Caja Crece Magia - tapa">
+      <img src="https://via.placeholder.com/885x295/111111/FFFFFF?text=Caja+abierta" class="rounded-2xl shadow-soft w-full h-44 object-cover" alt="Caja Crece Magia - abierta">
+      <img src="https://via.placeholder.com/885x295/222222/FFFFFF?text=Fragmento+reverso" class="rounded-2xl shadow-soft w-full h-44 object-cover col-span-2" alt="Ejemplo de fragmento">
     </div>
   </section>
-  <section id="galeria" class="max-w-6xl mx-auto px-4 py-20">
-    <h2 class="text-3xl font-extrabold mb-6" style="font-family:'Playfair Display',serif;">Galería</h2>
+
+  <!-- INTRO: QUÉ ES -->
+  <section id="intro" class="border-y border-white/10">
+    <div class="max-w-4xl mx-auto px-4 py-14 text-center">
+      <h2 class="text-3xl font-extrabold mb-4" style="font-family:'Playfair Display',serif;">¿Qué es Crece Magia?</h2>
+      <p class="text-xl leading-relaxed">No es una colección de frases. Es un <span class="gold">lenguaje simbólico</span>: 200 fragmentos + 200 imágenes que funcionan como espejos. No buscan adivinar; invitan a <em>presencia, discernimiento y verdad</em>.</p>
+      <div class="mt-6 grid sm:grid-cols-3 gap-4 text-left text-white/85">
+        <div class="bg-white/5 rounded-2xl p-5 ring-1 ring-white/10">
+          <h3 class="font-semibold gold">Poético y no predictivo</h3>
+          <p class="text-sm mt-1">La frase abre una puerta. La imagen sostiene el silencio. El sentido lo revelas tú.</p>
+        </div>
+        <div class="bg-white/5 rounded-2xl p-5 ring-1 ring-white/10">
+          <h3 class="font-semibold gold">Ritual simple</h3>
+          <p class="text-sm mt-1">Elige un fragmento, respira, contempla, integra. Un minuto que cambia el día.</p>
+        </div>
+        <div class="bg-white/5 rounded-2xl p-5 ring-1 ring-white/10">
+          <h3 class="font-semibold gold">Objeto bello</h3>
+          <p class="text-sm mt-1">Caja rígida, impresión 300 DPI, diseño minimalista y atemporal en negro y dorado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA IMÁGENES -->
+  <section id="galeria" class="max-w-6xl mx-auto px-4 py-16">
+    <div class="flex items-end justify-between mb-6">
+      <h2 class="text-3xl font-extrabold" style="font-family:'Playfair Display',serif;">Imágenes</h2>
+      <span class="text-sm text-white/60">Formato 3:1 — 7.5cm × 2.5cm</span>
+    </div>
     <div class="grid md:grid-cols-3 gap-4">
-      <div class="bg-white/5 p-3 rounded-2xl">
-        <img src="https://via.placeholder.com/885x295" class="w-full" alt="Fragmento 1">
-        <p class="mt-2 text-sm text-white/80">“Lo que buscas te busca.”</p>
+      <!-- Reemplaza los src por archivos dentro de /images -->
+      <figure class="bg-white/5 rounded-2xl overflow-hidden ring-1 ring-white/10">
+        <img src="https://via.placeholder.com/885x295/0A0A0A/FFFFFF?text=Lo+que+buscas+te+busca" class="w-full aspect-[3/1] object-cover" alt="Lo que buscas te busca">
+        <figcaption class="p-3 text-sm text-white/80">“Lo que buscas te busca.”</figcaption>
+      </figure>
+      <figure class="bg-white/5 rounded-2xl overflow-hidden ring-1 ring-white/10">
+        <img src="https://via.placeholder.com/885x295/0A0A0A/FFFFFF?text=El+ego+busca+razones" class="w-full aspect-[3/1] object-cover" alt="El ego busca razones. El alma, señales.">
+        <figcaption class="p-3 text-sm text-white/80">“El ego busca razones. El alma, señales.”</figcaption>
+      </figure>
+      <figure class="bg-white/5 rounded-2xl overflow-hidden ring-1 ring-white/10">
+        <img src="https://via.placeholder.com/885x295/0A0A0A/FFFFFF?text=La+sombra+guarda+regalos" class="w-full aspect-[3/1] object-cover" alt="La sombra también guarda regalos.">
+        <figcaption class="p-3 text-sm text-white/80">“La sombra también guarda regalos.”</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- PREGUNTAS FRECUENTES -->
+  <section id="faq" class="max-w-4xl mx-auto px-4 pb-16">
+    <h2 class="text-3xl font-extrabold mb-6" style="font-family:'Playfair Display',serif;">Preguntas frecuentes</h2>
+    <div class="space-y-4">
+      <details class="bg-white/5 rounded-2xl p-5 ring-1 ring-white/10">
+        <summary class="cursor-pointer font-semibold">¿Es un oráculo predictivo?</summary>
+        <p class="mt-2 text-white/80">No. Es un oráculo poético y no predictivo. No te dice qué pasará; te ayuda a ver con claridad lo que ya está.</p>
+      </details>
+      <details class="bg-white/5 rounded-2xl p-5 ring-1 ring-white/10">
+        <summary class="cursor-pointer font-semibold">¿Cómo se usa?</summary>
+        <p class="mt-2 text-white/80">Abre la caja, permite que un fragmento te encuentre, lee la frase, contempla la imagen del reverso y deja que el mensaje actúe en ti.</p>
+      </details>
+      <details class="bg-white/5 rounded-2xl p-5 ring-1 ring-white/10">
+        <summary class="cursor-pointer font-semibold">¿Para quién es?</summary>
+        <p class="mt-2 text-white/80">Para personas en procesos de búsqueda, sanación o transformación que valoran el símbolo sobre la predicción.</p>
+      </details>
+      <details class="bg-white/5 rounded-2xl p-5 ring-1 ring-white/10">
+        <summary class="cursor-pointer font-semibold">¿Qué incluye?</summary>
+        <p class="mt-2 text-white/80">200 tarjetas: una cara con frase esencial y otra con imagen simbólica en formato 3:1.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- CTA COMPRA -->
+  <section id="comprar" class="bg-white/5 border-t border-white/10">
+    <div class="max-w-5xl mx-auto px-4 py-14 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <h3 class="text-3xl font-extrabold" style="font-family:'Playfair Display',serif;">Reserva tu caja</h3>
+        <p class="mt-2 text-white/80">Precio referencial: <span class="gold font-semibold">$14.990 CLP</span>. Stock inicial limitado.</p>
+        <ul class="mt-3 text-white/80 space-y-1 text-sm">
+          <li>✔ Envíos a todo Chile</li>
+          <li>✔ Pago seguro</li>
+          <li>✔ Garantía de satisfacción</li>
+        </ul>
       </div>
-      <div class="bg-white/5 p-3 rounded-2xl">
-        <img src="https://via.placeholder.com/885x295" class="w-full" alt="Fragmento 2">
-        <p class="mt-2 text-sm text-white/80">“El ego busca razones. El alma, señales.”</p>
-      </div>
-      <div class="bg-white/5 p-3 rounded-2xl">
-        <img src="https://via.placeholder.com/885x295" class="w-full" alt="Fragmento 3">
-        <p class="mt-2 text-sm text-white/80">“La sombra también guarda regalos.”</p>
+      <div class="p-6 rounded-2xl bg-black/40 ring-1 ring-white/10">
+        <form class="grid gap-3" onsubmit="event.preventDefault(); window.open('https://wa.me/XXXXXXXXXXX?text=Hola%20quiero%20reservar%20mi%20Crece%20Magia','_blank')">
+          <input required type="text" placeholder="Tu nombre" class="px-4 py-3 rounded-xl bg-black/60 ring-1 ring-white/10 focus:outline-none focus:ring-2 ring-gold">
+          <input required type="email" placeholder="Tu correo" class="px-4 py-3 rounded-xl bg-black/60 ring-1 ring-white/10 focus:outline-none focus:ring-2 ring-gold">
+          <button class="mt-1 bg-[var(--gold)] text-black px-6 py-3 rounded-xl font-semibold shadow-soft hover:opacity-90">Reservar por WhatsApp</button>
+          <p class="text-xs text-white/60">Cambia el número de WhatsApp en el código para activar el botón.</p>
+        </form>
       </div>
     </div>
   </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-8 flex flex-col md:flex-row gap-3 items-center justify-between">
+      <p class="text-white/60 text-sm">© <span id="year"></span> Crece Magia</p>
+      <p class="text-white/60 text-sm">IG / TikTok: @crecemagia</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
